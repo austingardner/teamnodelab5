@@ -15,8 +15,53 @@ body {
 }
 
 #areainput {
-  background-color: rgba(187, 181, 181, 0.5);
+  background-color: rgba(207, 201, 201, 0.85);
   text-align: center;
   position: relative;
   top: 200px;
+  width: 80%;
+    overflow: auto;
+    margin-left: 10%;
+    border-radius: 40px;
+    
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+    padding-bottom: auto;
+}
+li {
+    font-size: 2em;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+    width: 20%;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+li:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+#mainHeader {
+    font-size: 4em;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+#gameBoard {
+    font-size: 2em;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    border-radius: 10px;
+    margin-top: 30px;
 }

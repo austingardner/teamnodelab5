@@ -2,17 +2,37 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" >
-<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!--<script src="app.js"></script>-->
 
 </head>
 
 <body>
+    <h1 id="mainHeader">March Madness Decision-Maker</h1>
+    <div id="gameBoard">Choose Your theoretical opponenets:</div>
 <div id="areainput">
   INPUT SOME STUFF HERE <br>
   YOYO<br>
   morestuff<br>
   
 </div>
-
+<script>
+    $(document).ready(function() {
+        console.log("document is ready");
+       $.getJSON('../getteams',function(data) {
+           var list;
+           list = "<ul>";
+           $.each(data, function(i, item) {
+               list += "<li>" + data[i].team + "(" + data[i].rank + ")</li>";
+           });
+           list += "</ul>";
+           $("#areainput").html(list);
+       });
+    });
+    
+    
+    
+    
+</script>
 </body>
 </html>

@@ -25,23 +25,43 @@ console.log("myRe: " + myRe);
             rank: 1
         },
         {
-            team: "Kansas",
+            team: "Arizona",
             rank: 2
         },
         {
-            team: "UCLA",
+            team: "Baylor",
             rank: 3
+        },
+        {
+            team: "West Virginia",
+            rank: 4
+        },
+        {
+            team: "Notre Dame",
+            rank: 5
+        },
+        {
+            team: "Maryland",
+            rank: 6
+        },
+        {
+            team: "Saint Mary's",
+            rank: 7
+        },
+        {
+            team: "Northwestern",
+            rank: 8
         }
     ];
-for(var i = 0; i < teams.length; i++) {
- /* var result = cities[i].search(myRe); 
+/* for(var i = 0; i < teams.length; i++) {
+ var result = cities[i].search(myRe); 
   if(result != -1) {
-    console.log(cities[i]);*/
+    console.log(cities[i]);
     var team = teams[i].split();
     
     jsonresult.push({team:team[1],rank:team[0]});
- // }
-} 
+ // }*/
+//} 
     res.status(200).json(jsonresult);
 });
 
