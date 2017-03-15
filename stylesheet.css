@@ -1,5 +1,22 @@
+body {
+  background-image: url("http://cdn.allrookie.com/wp-content/uploads/2015/03/March-Madness-Bracket-8.jpg");
+  background-size: cover;
+}
+/*
 #bgpic {
    background-color: rgba(187, 181, 181, 0.5);
    width: 100%;
    height: 100%;
+}
+*/
+
+#background {
+  width: 100%;
+}
+
+#areainput {
+  background-color: rgba(187, 181, 181, 0.5);
+  text-align: center;
+  position: relative;
+  top: 200px;
 }
