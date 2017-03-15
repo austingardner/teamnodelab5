@@ -10,6 +10,11 @@
 <body>
     <h1 id="mainHeader">March Madness Decision-Maker</h1>
     <div id="gameBoard">Choose Your theoretical opponenets:</div>
+    <div id="opponentContainer">
+    <div id="leftTeam"></div>
+    <button id="calculateWinner">See who wins</button>
+    <div id="rightTeam"></div>
+    </div>
 <div id="areainput">
   INPUT SOME STUFF HERE <br>
   YOYO<br>
@@ -21,14 +26,33 @@
         console.log("document is ready");
        $.getJSON('../getteams',function(data) {
            var list;
-           list = "<ul>";
+           list = '<ul id="listOfTeams">';
            $.each(data, function(i, item) {
-               list += "<li>" + data[i].team + "(" + data[i].rank + ")</li>";
+               list += '<li id="' + i + '" onclick="updateBox(this)">' + data[i].team + "(" + data[i].rank + ")</li>";
            });
            list += "</ul>";
            $("#areainput").html(list);
        });
     });
+    var counter = 0;
+    var updateBox = function(ele) {
+        if (counter == 0) {
+            var num = ele.id;
+            console.log(num);
+            var li = document.getElementById(num);
+            console.log(li.innerHTML);
+            $("#leftTeam").text(li.innerHTML);
+            counter++;
+        }
+        else if (counter == 1) {
+            var num = ele.id;
+            console.log(num);
+            var li = document.getElementById(num);
+            console.log(li.innerHTML);
+            $("#rightTeam").text(li.innerHTML);
+            counter++;
+        }
+    };
     
     
     
